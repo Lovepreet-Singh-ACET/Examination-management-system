@@ -1,0 +1,77 @@
+create table students(
+roll_no number(20) primary key,
+name varchar2(40) not null,
+course varchar2(40) not null,
+branch varchar2(40) not null,
+email varchar2(40) not null,
+gender varchar2(10) not null,
+contact number(10) not null,
+dob varchar2(20) not null,
+city varchar2(30) not null,
+state varchar2(30) not null);
+
+
+
+create table teachers(
+id number(20) primary key,
+name varchar2(40) not null,
+course varchar2(40) not null,
+branch varchar2(20) not null,
+email varchar2(50) not null,
+gender varchar2(10) not null,
+contact number(10) not null,
+dob varchar2(20) not null,
+city varchar2(30) not null,
+state varchar2(30) not null);
+
+
+
+create table question_details(
+branch varchar2(20) not null,
+subject varchar2(20) not null,
+q_no number(5) not null,
+question varchar2(150) not null,
+option_1 varchar2(50) not null,
+option_2 varchar2(50) not null,
+option_3 varchar2(50) not null,
+option_4 varchar2(50) not null,
+answer varchar2(50) not null,
+set_by varchar2(40) not null,
+CONSTRAINT CompKey_Branch_Subject_Q_no PRIMARY KEY (branch,subject,q_no));
+
+
+
+
+create table course_branch(
+code_no number(3) not null primary key,
+course varchar2(20) not null,
+branch varchar2(20) not null,
+subject varchar2(30) not null
+);
+
+
+
+
+create table result (
+roll_no number not null primary key,
+name varchar2(30) not null,
+gender varchar2(30) not null,
+course varchar2(30) not null,
+branch varchar2(30) not null,
+subject varchar2(30) not null, 
+no_of_question varchar2(30) not null,
+correct varchar2(30) not null,
+incorrect varchar2(30) not null,
+attempted_on date default sysdate);
+
+
+
+
+create table users(
+user_type varchar2(30) not null,
+id number not null,
+username varchar2(30) not null,
+password varchar2(30) not null,
+CONSTRAINT CompKey_User_type_ID PRIMARY KEY (user_type, id));
+
+
