@@ -6,7 +6,7 @@
 
 
 
-This project was created as an Academic project in 4th semester of my B.Tech.
+This project was created as an Academic project in 4th semester(Jan(2020)-June(2020)) of my B.Tech.
 There was a team of four Students while we were making this project.
 I would like to thank all my team members who made this project a success.
 
